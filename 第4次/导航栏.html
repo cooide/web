@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<title>Demo</title>
+<head>
+    <style type="text/css">
+        #navlist ul {
+            list-style: none;
+        }
+
+        #navlist ul li {
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            background-color:rgb(241, 138, 20);
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #navlist ul li:hover {
+            background-color:tomato;
+            color:yellowgreen;
+        }
+    </style>
+
+<body>
+    <style type="text/css"></style>
+    <div id="navlist"></div>
+    <script>
+        var navlist = ["首页", "免费资源", "课程中心", "11学院", "学员故事", "线上课堂"];
+        var str = '<ul>';
+        for (let i in navlist) {
+            str += "<li>" + navlist[i] + "</li>"
+        }
+
+        str += "</ul>"
+        document.getElementById("navlist").innerHTML = str;
+    </script>
+
+
+    </head>
+
+
+</body>
+
+</html>

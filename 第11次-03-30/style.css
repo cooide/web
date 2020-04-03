@@ -1,0 +1,49 @@
+@charset = "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tel_div {
+    width: 510px;
+    margin: 15px auto;
+    border: 1px solid #333;
+}
+
+.tel_div h3 {
+    background-color: #3eede7;
+    text-align: center;
+    padding: 6px 0;
+    color: #fff;
+}
+
+.tel_div .frm_group {
+    margin:15px 60px;
+}
+
+.tel_div input {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    padding: .2em .4em;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+table {
+    width: 90%;
+    margin: 15px auto;
+    border-collapse: collapse;
+}
+
+#message td, #message th {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 6px;
+    color: #333;
+}

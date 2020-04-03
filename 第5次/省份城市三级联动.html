@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>省份城市的三级联动</title>
+</head>
+
+<body>
+    <form>
+        <select id="province">
+        <option value="-1">请选择</option>
+      </select>
+        <select id="city"></select>
+        <select id="country"></select>
+    </form>
+    <script>
+        var provinceArr = ['安徽', '江苏', '上海'];
+
+        var cityArr = [
+            ['合肥', '芜湖', '蚌埠'],
+            ['南京', '苏州', '扬州'],
+            ['上海', ]
+        ];
+
+        var countryArr = [
+            [
+                ['瑶海区', '包河区', '蜀山区'],
+                ['镜湖区', '戈江区', '鸠江区'],
+                ['禹会区', '蚌山区', '淮上区']
+            ],
+            [
+                ['玄武区', '浦口区', '栖露区'],
+                ['虎丘区', '吴江区', '姑苏区'],
+                ['广陵区', '秆江区', '江都区']
+            ],
+            ['黄埔区', '浦东区', '宝山区', ]
+        ];
+
+        function createOption(obj, data) {
+            for (var i in data) {
+                var op = new Option(data[i], i);
+                obj.options.add(op);
+            }
+        }
+        var province = document.getElementById('province');
+        createOption(province, provinceArr);
+
+        var city = document.getElementById('city');
+        province.onchange = function() {
+            city.options.length = 0;
+            createOption(city, cityArr[province.value]);
+            if (province.value >= 0) {
+                city.onchange();
+            } else {
+                country.options.length = 0;
+            }
+        };
+
+        var country = document.getElementById('country');
+        city.onchange = function() {
+            country.options.length = 0;
+            createOption(country, countryArr[province.value][city.value]);
+        };
+    </script>
+</body>
+
+</html>

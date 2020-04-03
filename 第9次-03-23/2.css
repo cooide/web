@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#cal_content table{
+    float: left;
+    width: 240px;
+    height: 220px;
+    margin: 10px;
+    margin-left:0 ;
+    padding: 10px;
+    background-color: aquamarine;
+    text-align: center;
+}
+#cal_content table th{
+    border-bottom: 2px solid #333;
+}
+#cal_box {
+    margin:0 auto;
+    padding: 20px 0;
+    width: 760px;
+}
+#cal_year select {
+    width: 60px;
+}

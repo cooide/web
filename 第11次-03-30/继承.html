@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(name) {
+            this.name = name;
+            // this.introduce = function() {};
+        }
+        //利用原型对象实现继承
+        // Person.prototype.introduce = function(){
+        //     console.log('Hello,My name is' + this.name);
+        // };
+
+
+        //替换原型对象实现继承
+        // Person.prototype = {
+        //     introduce: function() {
+        //         console.log('My name is' + this.name);
+        //     }
+        // };
+        var obj = {
+            introduce: function () {
+                console.log('My name is ' + this.name);
+            }
+        };
+        //使用Object.create实现继承
+        var p1 = Object.create(obj);
+        var p2 = Object.create(obj);
+        p1.name = 'Jack';
+        p2.name = 'Rose';
+        // var p1 = new Person('Jack');
+        // var p2 = new Person('Rose');
+        console.log(p1.introduce == p2.introduce);
+        p1.introduce();
+        p2.introduce();
+    </script>
+
+</body>
+
+</html>

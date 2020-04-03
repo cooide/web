@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+</head>
+
+<body>
+    <p>整数1:<input type="text" id="num1">
+        <p>整数2:<input type="text" id="num2">
+            <p><input type="button" value="加" onclick="calc(add)">
+                <input type="button" value="减" onclick="calc(sub)">
+                <input type="button" value="乘" onclick="calc(mul)">
+                <input type="button" value="除" onclick="calc(div)">
+                <p><input type="text" id="result" readonly="true">
+                    <script>
+                        function calc(func) {
+                            var num1 = document.getElementById("num1").value;
+                            var num2 = document.getElementById("num2").value;
+                            var result = document.getElementById("result");
+                            num1 = parseInt(num1);
+                            num2 = parseInt(num2);
+                            if (isNaN(num1) || isNaN(num2)) {
+                                alert("非法输入");
+                                return false;
+                            }
+                            result.value = func(num1, num2)
+
+                        }
+                        function add(num1, num2) {
+                            return num1 + num2;
+                        }
+                        function sub(num1, num2) {
+                            return num1 - num2;
+                        }
+                        function mul(num1, num2) {
+                            return num1 * num2;
+                        }
+                        function div(num1, num2) {
+                            if (num2 === 0) {
+                                return "被除数不能为0！"
+                            } else {
+                                return num1 / num2;
+                            }
+                        }
+
+                    </script>
+</body>
+
+</html>
+
+
+<!-- 2020-03-16 -->

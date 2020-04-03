@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function maopao(arr) {
+            var len = arr.length;
+            for (let i = 0; i < len - 1; i++) {
+                for (let j = 0; j < len - 1 - i; j++) {
+                    // 相邻元素两两对比，元素交换，大的元素交换到后面
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            document.write(arr);
+        }
+
+        function charu(arr) {
+            var temp
+            var length = arr.length, j
+            for (let i = 1; i < length; i++) {
+                j = i
+                temp = arr[i]
+                while (j > 0 && arr[j - 1] > temp) {
+                    arr[j] = arr[j - 1]
+                    j--
+                }
+                arr[j] = temp
+            }
+            document.write(arr)
+        }
+
+        function xuanze(arr) {
+            var length = arr.length
+            var min, temp
+
+            for (let i = 0; i < length - 1; i++) {
+                min = i
+                for (let j = i; j < length; j++) {
+                    if (arr[min] > arr[j]) {
+                        min = j
+                    }
+                }
+                if (arr[min] !== arr[i]) {
+                    temp = arr[i]
+                    arr[i] = arr[min]
+                    arr[min] = temp
+                }
+            }
+            document.write(arr)
+        }
+
+        myArr = [9, 70, 89, 6, 5, 64, 39, 26, 11];
+        //使用函数
+        maopao(myArr);
+        document.write("<br>");
+        charu(myArr);
+        document.write("<br>");
+        xuanze(myArr);
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

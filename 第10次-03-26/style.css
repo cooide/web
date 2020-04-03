@@ -1,0 +1,17 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#add_sel {
+    margin: 10px;
+}
+#community, #add_complete {
+    display: inline-block;
+    border: none;
+    margin: 10px;
+    padding: 15px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(28, 214, 228);
+}

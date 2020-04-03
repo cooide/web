@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单生成器</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-head">个人信息</div>
+        <div class="box-body">
+            <form id="myform" action="#" method="post">
+                <!-- 姓名：<input type="text" name="user"><br>
+                性别：<input type="radio" name="gender" value="m">男<input type="radio" name="gender" value="w">女<br>
+                爱好：<input type="checkbox" name="hobby" value="running">跑步<input type="checkbox" name="hobby"
+                    value="reading">读书<input type="checkbox" name="hobby" value="swimming">游泳<br>
+                住址：<select name="address">
+                    <option value=''>--请选择--</option>
+                    <option value="hf">合肥</option>
+                    <option value="bp">蚌埠</option>
+                    <option value="zps">紫蓬山</option>
+                </select><br>
+                自我介绍：<br><textarea name="introduce" cols="50" rows="5"></textarea><br>
+                <input type="submit" value="提交"> -->
+            </form>
+        </div>
+        <script type="text/javascript" src="FormBuilder.js"></script>
+        <script type="text/javascript">
+            var elements = [
+                { tag: 'input', tip: '姓    名：', attr: { type: 'text', name: 'user' } },
+                { tag: 'input', tip: '性    别：', attr: { type: 'radio', name: 'gender' }, option: { m: '男', w: '女' } },
+                { tag: 'input', tip: '爱    好：', attr: { type: 'checkbox', name: 'hobby' }, option: { swimming: '游泳', reading: '读书', running: '跑步' } },
+                { tag: 'select', tip: '住    址：', attr: { name: 'area' }, option: { '': '--请选择--', hf: '合肥', wh: '芜湖', bp: '蚌埠', zps: '紫蓬山' } },
+                { tag: 'textarea', tip: '自我介绍：', attr: { name: 'introduce', cols: '50', rows: '5' } },
+                { tag: 'input', attr: { type: 'submit', value: '提交' } }
+            ];
+            document.getElementById("myform").innerHTML = new FormBuilder(elements).create();
+        </script>
+</body>
+
+</html>
+
+
+<!-- 2020-04-02 -->

@@ -1,0 +1,74 @@
+[
+    {
+        "bankName": "农业银行",
+        "bankTel": "95599"
+    },
+    {
+        "bankName": "建设银行",
+        "bankTel": "95533"
+    },
+    {
+        "bankName": "中国银行",
+        "bankTel": "95566"
+    },
+    {
+        "bankName": "工商银行",
+        "bankTel": "95588"
+    },
+    {
+        "bankName": "交通银行",
+        "bankTel": "95559"
+    },
+    {
+        "bankName": "招商银行",
+        "bankTel": "95555"
+    },
+    {
+        "bankName": "华夏银行",
+        "bankTel": "95577"
+    },
+    {
+        "bankName": "兴业银行",
+        "bankTel": "95561"
+    },
+    {
+        "bankName": "深圳发展银行",
+        "bankTel": "95501"
+    },
+    {
+        "bankName": "中信实业银行",
+        "bankTel": "95558"
+    },
+    {
+        "bankName": "民生银行",
+        "bankTel": "95568"
+    },
+    {
+        "bankName": "上海浦东发展银行",
+        "bankTel": "95528"
+    },
+    {
+        "bankName": "光大银行",
+        "bankTel": "95595"
+    },
+    {
+        "bankName": "徽商银行",
+        "bankTel": "96588"
+    },
+    {
+        "bankName": "邮政储藏银行",
+        "bankTel": "95580"
+    },
+    {
+        "bankName": "广发银行",
+        "bankTel": "95508"
+    },
+    {
+        "bankName": "中国光大银行",
+        "bankTel": "95595"
+    },
+    {
+        "bankName": "重庆银行",
+        "bankTel": "96899"
+    }
+]

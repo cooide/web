@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function deepCopy(obj) {
+            var obj2 = {};
+            for (let key in obj) {
+                obj2[key] = obj[key];
+            }
+            return obj2;
+        }
+        var obj = {
+            name: 'Jack',
+            age: 23
+        };
+        var obj2 = deepCopy(obj);
+        obj2.name = 'Mike';
+        console.log(obj.name);
+        console.log(obj2.name);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var n = prompt("请选择生成猴子数量");
+        var m = prompt("请选择数字");
+        var monkey = [];
+        for (let i = 1; i <= n; i++) {
+            monkey.push(i);
+        }
+        console.log(monkey);
+        var i = 0;
+        var head;
+        while (monkey.length > 1) {
+            i++;
+            head = monkey.shift();
+            if (i % m != 0) {
+                monkey.push(head);
+            }
+        }
+        document.write("大王编号：" + monkey[0]);
+    </script>
+</body>
+
+</html>

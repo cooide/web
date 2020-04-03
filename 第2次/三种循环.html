@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css"></style>
+    <script type="text/javascript">
+        function For() {
+            var sum = 0;
+            var a = prompt("请输入需要累加的数据(for循环)");
+            if (!isNaN(a) && a != null) {
+                for (var i = 1; i <= a; i++) {
+                    sum = sum + i;
+                }
+                alert("从1累加到" + a + "的结果是" + sum);
+            } else {
+                alert('请输入正确的数字');
+                For();
+            }
+        }
+        function Do() {
+            var sum = 0;
+            var a = prompt("请输入需要累加的数据(do while循环)");
+            if (!isNaN(a) && a != null) {
+                var i = 1;
+                do {
+                    sum = sum + i;
+                    i++;
+                } while (i <= a);
+                alert("从1累加到" + a + "的结果是" + sum);
+            } else {
+                alert('请输入正确的数字');
+                Do();
+            }
+        }
+        function While() {
+            var sum = 0;
+            var a = prompt("请输入需要累加的数据(while循环)");
+            if (!isNaN(a) && a != null) {
+                var i = 1;
+                while (i <= a) {
+                    sum = sum + i;
+                    i++;
+                }
+                alert("从1累加到" + a + "的结果是" + sum);
+            } else {
+                alert('请输入正确的数字');
+                While();
+            }
+        }
+        For();
+        Do();
+        While();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

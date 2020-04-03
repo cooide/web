@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = 'Mike';
+            this.age = '23';
+            this.sayHello = function () {
+                console.log('Hello,my name is' + this.name);
+            }
+        }
+        var p1 = new Person('Jack', 18);
+        var p2 = new Person('Alice', 19);
+        console.log(p1);
+        console.log(p2);
+        p1.sayHello();
+        console.log(p1.constructor);
+    </script>
+</body>
+
+</html>
+
+
+<!-- 2020-03-19 -->
